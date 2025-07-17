@@ -36,7 +36,6 @@ func main(){
 
 	temp()
 	tempShortOperator()
-
 }
 
 func params(p1 int){
