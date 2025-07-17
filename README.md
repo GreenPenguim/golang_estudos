@@ -1,10 +1,8 @@
-<img src="https://go.dev/doc/gopher/gopherbelly300.jpg" width="55" style="border-radius: 5px;"/>
-
-# golang_estudos
+<img src="https://go.dev/doc/gopher/gopherbelly300.jpg" width="55" style="border-radius: 5px;"/> <h1>Golang</h1> 
 
 ### Creating a .exe of the go archive
 
-- `go build nomeArquivo.go` on terminal;
+- `go build archiveName.go` on terminal;
 
 ### Using the most common
 
