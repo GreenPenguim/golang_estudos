@@ -36,8 +36,8 @@ func main(){
 	/*
 		Short operator :=        <- looks like gopher :F
 
-	Is used to declare and initialize a variable in one step.
-	It is only used inside functions, not at the package level.
+		Is used to declare and initialize a variable in one step.
+		It is only used inside functions, not at the package level.
 
 	*/
 
