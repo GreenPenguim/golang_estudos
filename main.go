@@ -35,16 +35,7 @@ func main(){
 	}
 
 	temp()
-	/*
-		Short operator :=        <- looks like gopher :F
-
-		Is used to declare and initialize a variable in one step.
-		It is only used inside functions, not at the package level.
-
-	*/
-
 	tempShortOperator()
-
 
 }
 
@@ -52,7 +43,6 @@ func params(p1 int){
 	fmt.Println("Parameter:", p1)
 	fmt.Printf("\n")
 }
-
 
 const ebulitionF float64 = 212.00
 
@@ -66,15 +56,31 @@ func temp(){
 }
 
 func tempShortOperator(){
-	fmt.Println("Using the short operator :=")
+	/*
+		Short operator :=        <- looks like gopher :F
+
+		Is used to declare and initialize a variable in one step.
+		It is only used inside functions, not at the package level.
+
+	*/
+
 	tempF := ebulitionF
 	tempC := ((tempF - 32) * 5) / 9 
-
+	
 	// Using the Printf
 	// %g is used to format the float without unnecessary decimal places
+	fmt.Println("Using the short operator :=")
 	fmt.Printf("Temperature of water in Fahrenheit: %g \nTemperature of water in Celsius: %g\n\n", tempF, tempC)
 
 	// %T reveals the type of the variable
 	fmt.Printf("Temperature of water in Fahrenheit: %g(%T) \nTemperature of water in Celsius: %g(%T)\n", tempF,tempF, tempC,tempC)
-	
+}
+
+func dataConversion(){
+	var1 := 10
+	var2 := "John Doe"
+
+	var var3 float64 = float64(var1)
+	fmt.Printf("var3 value: %g \n var2 value: %s", var3, var2)
+
 }
