@@ -4,29 +4,31 @@ import "fmt"
 
 func main(){
 	// It is possible to create variables with no type defined
-	var name string = "Houdini"
-	var age int = 20
+	var name = "Houdini"
+	var age = 20
 	var version float32 = 1.0
-	fmt.Println("Name:", name,",", "Age:", age, ",", "Version:", version,)
-	
+	fmt.Println("Name:", name,",", "Age:", age, ",", "Version:", version)
+	fmt.Printf("\n")
+
 	// Array is one data type with fixed size.
 	var arr [7]int
 	arr[4] = 35
 	fmt.Println("Array:", arr)
+
 	// Slice is a part of an array, unique data and dynamic size 
 	// A map is a collection of key-value pairs, a.K.a: hash tables, associative arrays, dictionaries.
-
+	fmt.Printf("\n")
 	params(10)
 
 	// Structs are used to create complex data types.
 	type Person struct {
 		stName string
 		ndName string
-		Age int
+		age int
 	}
 	p1 := Person{"Houdini","Silta", 20} 
 
-	fmt.Println("Pessoa:", p1.stName, p1.ndName, p1.Age)
+	fmt.Println("Pessoa:", p1.stName, p1.ndName, p1.age)
 
 	type CrazyString interface {
 		String() string
@@ -48,6 +50,7 @@ func main(){
 
 func params(p1 int){
 	fmt.Println("Parameter:", p1)
+	fmt.Printf("\n")
 }
 
 
@@ -59,6 +62,7 @@ func temp(){
 
 	fmt.Println("Temperature of water in Fahrenheit:", tempF)
 	fmt.Println("Temperature of water in Celsius:", tempC)
+	fmt.Printf("\n")
 }
 
 func tempShortOperator(){
@@ -67,6 +71,10 @@ func tempShortOperator(){
 	tempC := ((tempF - 32) * 5) / 9 
 
 	// Using the Printf
-	fmt.Printf("Temperature of water in Fahrenheit: %g \nTemperature of water in Celsius: %g", tempF, tempC)
+	// %g is used to format the float without unnecessary decimal places
+	fmt.Printf("Temperature of water in Fahrenheit: %g \nTemperature of water in Celsius: %g\n\n", tempF, tempC)
+
+	// %T reveals the type of the variable
+	fmt.Printf("Temperature of water in Fahrenheit: %g(%T) \nTemperature of water in Celsius: %g(%T)\n", tempF,tempF, tempC,tempC)
 	
 }
