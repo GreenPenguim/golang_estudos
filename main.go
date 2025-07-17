@@ -62,9 +62,11 @@ func temp(){
 }
 
 func tempShortOperator(){
+	fmt.Println("Using the short operator :=")
 	tempF := ebulitionF
 	tempC := ((tempF - 32) * 5) / 9 
 
-	fmt.Println("Temperature of water in Fahrenheit:", tempF)
-	fmt.Println("Temperature of water in Celsius:", tempC)
+	// Using the Printf
+	fmt.Printf("Temperature of water in Fahrenheit: %g \nTemperature of water in Celsius: %g", tempF, tempC)
+	
 }
