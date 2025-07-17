@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main(){
-	tipos()
+	types()
 	arrays()
 	params(10)
 }
 
-func tipos(){
-// It is possible to create variables with no type defined
+func types(){
+	// It is possible to create variables with no type defined
 	var name string = "Houdini"
 	var age int = 20
 	var version float32 = 1.0
@@ -17,7 +17,7 @@ func tipos(){
 }
 
 func arrays(){
-// One data type with fixed size.
+	// One data type with fixed size.
 	var arr [7]int
 	arr[4] = 35
 	fmt.Println("Array:", arr)
@@ -35,7 +35,7 @@ func params(p1 int){
 	fmt.Println("Parameter:", p1)
 }
 
-func estrutura(){
+func structure(){
 	// Structs are used to create complex data types.
 	type Person struct {
 		stName string
