@@ -1,4 +1,6 @@
-<img src="https://go.dev/doc/gopher/gopherbelly300.jpg" width="55" style="border-radius: 5px;"/> <h1>Golang</h1> 
+<img src="https://go.dev/doc/gopher/gopherbelly300.jpg" width="55" style="border-radius: 5px;"/>
+
+# Golang
 
 ### Creating a .exe of the go archive
 
