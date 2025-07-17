@@ -1,5 +1,5 @@
 # golang_estudos
 
-### Gerando executável do programa:
-- ``go build nomeArquivo.go``;
+### Creating a .exe of the go archive
+- ``go build nomeArquivo.go`` on terminal;
 
