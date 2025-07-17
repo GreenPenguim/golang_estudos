@@ -34,7 +34,7 @@ func main(){
 
 	temp()
 	/*
-		Short operator :=        <- looks like the gopher :F
+		Short operator :=        <- looks like gopher :F
 
 	Is used to declare and initialize a variable in one step.
 	It is only used inside functions, not at the package level.
