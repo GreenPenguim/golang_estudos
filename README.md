@@ -6,7 +6,7 @@
 
 - `go build archiveName.go` on terminal;
 
-### Using the most common
+### Cheatsheet for printing variables
 
 | **Shorthand** | **Type**    | **Description**                         |
 | :------------ | :---------- | :-------------------------------------- |
