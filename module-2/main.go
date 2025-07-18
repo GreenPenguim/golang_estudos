@@ -11,6 +11,14 @@ func main(){
 		}else{
 			result = "odd" 
 		}
+		switch i {
+			case 5:
+				result += " five"
+			case 7:
+				result += " seven"
+			case 9:
+				result += " nine"
+		}
 		fmt.Printf("%v (%s)\n", i, result)
 	}
 }
