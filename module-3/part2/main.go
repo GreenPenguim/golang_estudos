@@ -11,6 +11,7 @@ import (
 	"log"
 	"bytes"
 	"strings"
+	"path/filepath"
 )
 
 func main(){
@@ -19,6 +20,7 @@ func main(){
 	ioutilPkg()
 	bytesPkg()
 	osPkg()
+	filePath()
 }
 
 func ioPkg(){
@@ -36,7 +38,7 @@ func ioutilPkg(){
 }
 
 func bytesPkg(){
-	fmt.Printf("%s", bytes.Title([]byte("The way, the truth, and the life.")))
+	fmt.Printf("%s", bytes.Title([]byte("The way, the truth, and the life.\n")))
 }
 
 func osPkg(){
@@ -47,4 +49,11 @@ func osPkg(){
 	if err := f.Close(); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func filePath(){
+	filepath.Walk("./module-3",(func (path string, info os.FileInfo, err error) error  {
+		fmt.Println(path)
+		return nil
+	}))
 }
