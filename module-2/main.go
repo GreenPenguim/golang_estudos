@@ -44,9 +44,10 @@ func loop2(){
 
 // In golang, we dont have a 'while', otherwise we can use 'for' loop as 'while' 
 func loop3(){
-	i:=0
+	i:= 0
 	for i<=5 {
 		fmt.Println("Looping:", i)
 		i++
 	}
 }
+
