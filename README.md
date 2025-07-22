@@ -2,7 +2,19 @@
 
 # Golang
 
-### Creating a .exe of the go archive
+## Documentation
+
+<img src="https://go.dev/images/gophers/motorcycle.svg" width="70" style="margin: 0px 0px 0px 0px;"/> 
+
+[Language Documentation](https://go.dev/doc/)
+
+___
+
+<img src="https://pkg.go.dev/static/shared/gopher/package-search-700x300.jpeg" width="150" style="border-radius: 5px;"/>
+
+[Packages Documentation](https://pkg.go.dev/)
+
+## Creating a .exe of the go archive
 
 - `go build archiveName.go` on terminal;
 
