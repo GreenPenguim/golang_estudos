@@ -186,7 +186,6 @@ func (c Circle) perimeter() float64 {
 	return 2 * math.Pi * c.radius
 }
 
-
 func measure(s Shape){
 	fmt.Println("Shape:", s)
 	fmt.Println("Area:", s.area())
