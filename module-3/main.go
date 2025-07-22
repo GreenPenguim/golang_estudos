@@ -1,6 +1,8 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+)
 
 /*
 	Function -> a.K.a.: Method (linked to POO), Subroutine, Procedure
@@ -8,12 +10,12 @@ import ("fmt")
 	Function is a block of code that can be called by name, and can receive parameters and return values.
 */
 
-
 func main(){
 	list := []float64{98, 93, 77, 82, 83}
 	fmt.Println("Functions")
 	fmt.Printf("Average: %f \n", average(list))
 	fmt.Println("-----")
+
 	fmt.Println("Clousure and Recursion")
 	fmt.Printf("Clousure:\n")
 	clousure()
@@ -21,6 +23,15 @@ func main(){
 	fmt.Printf("Recursion:\n")
 	fmt.Println(factorial(9))
 	fmt.Println("-----")
+
+	fmt.Println("Defer, Panic and Recover")
+	fmt.Printf("Defer:\n")
+	deferExample()
+	fmt.Printf("Panic and Recover:\n")
+	panicAndRecover()
+	fmt.Println("-----")
+
+	
 }
 
 func average(list []float64) float64{
@@ -53,4 +64,35 @@ func factorial(x int) int {
 		return 1
 	}
 	return x * factorial(x-1)
+}
+
+/*
+	Defer: scalone that allows you to delay the execution of a function until the surrounding function returns.
+*/
+func day1(){
+	fmt.Println("Starting day 1")
+}
+func day2(){
+	fmt.Println("Starting day 2")
+}
+
+func deferExample() {
+	defer day1()
+	day2()
+}
+
+/*
+	Panic: a way to stop the normal execution of a program and start the panic process, which can be recovered with recover.
+
+	Recover: a way to recover from a panic and continue the execution of the program.
+*/
+
+func panicAndRecover(){
+	defer func(){
+		x := recover()
+		fmt.Println("Recovered from panic:", x)
+	
+	}()
+
+	panic("Panic!!")
 }
