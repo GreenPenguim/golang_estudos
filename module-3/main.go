@@ -29,9 +29,10 @@ func main(){
 	deferExample()
 	fmt.Printf("Panic and Recover:\n")
 	panicAndRecover()
-	fmt.Println("-----")
-
 	
+	fmt.Println("Pointer")
+	pointer()
+	fmt.Println("-----")
 }
 
 func average(list []float64) float64{
@@ -95,4 +96,21 @@ func panicAndRecover(){
 	}()
 
 	panic("Panic!!")
+}
+
+/*
+	Pointer: a way to reference a variable's memory address, allowing for direct manipulation of the variable's value.
+
+	* = dereference operator, used to access the value stored at the memory address pointed to by a pointer.
+	
+	& = address operator, used to get the memory address of a variable.
+*/
+func initialValue(xPtr *int){
+	*xPtr = 0
+}
+
+func pointer(){
+	x := 5
+	initialValue(&x)
+	fmt.Println("Initial value:", x)
 }
