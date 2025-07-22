@@ -10,13 +10,16 @@ func main(){
 	fmt.Println("Name:", name,",", "Age:", age, ",", "Version:", version)
 	fmt.Printf("\n")
 
-	// Array is one data type with fixed size.
+	/*
+		Array is one data type with fixed size.
+
+		Slice is a part of an array, unique data and dynamic size 
+		
+		A map is a collection of key-value pairs, a.K.a: hash tables, associative arrays, dictionaries.
+	*/
 	var arr [7]int
 	arr[4] = 35
 	fmt.Println("Array:", arr)
-
-	// Slice is a part of an array, unique data and dynamic size 
-	// A map is a collection of key-value pairs, a.K.a: hash tables, associative arrays, dictionaries.
 	fmt.Printf("\n")
 	params(10)
 
