@@ -1,19 +1,20 @@
 /*
-	Packages is a group of functions, that can be used in other files.
-	Importing a package allows you to use its functions and variables in your code.
+Packages is a group of functions, that can be used in other files.
+Importing a package allows you to use its functions and variables in your code.
 */
 package main
 
 import (
+	"bytes"
+	"container/list"
 	"fmt"
-	"os"
 	"io"
 	"log"
-	"time"
-	"bytes"
-	"strings"
+	"os"
 	"path/filepath"
-	"container/list"
+	"sort"
+	"strings"
+	"time"
 )
 
 func main(){
@@ -24,7 +25,8 @@ func main(){
 	osPkg()
 	filePath()
 	defer errorPkg()
-	 containerList()
+	containerList()
+	sortPkg()
 }
 
 func ioPkg(){
@@ -94,4 +96,31 @@ func containerList(){
 	for e := l.Front(); e != nil; e = e.Next() {
 		fmt.Println(e.Value)
 	}
+}
+
+type Data struct{
+	name string
+	age int
+}
+type ByName []Data
+
+func (bN ByName) Len() int {
+	return len(bN)
+}
+
+func (bN ByName) Less(i, j int) bool {
+	return bN[i].name < bN[j].name
+}
+
+func (bN ByName) Swap(i,j int){
+	bN[i], bN[j] = bN[j], bN[i]
+}
+
+func sortPkg(){
+	people := []Data{
+		{"Charlie", 35},
+		{"Bob", 25},
+	}
+	sort.Sort(ByName(people))
+	fmt.Println(people)
 }
