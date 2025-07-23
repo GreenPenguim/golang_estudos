@@ -9,9 +9,11 @@ import (
 	"os"
 	"io"
 	"log"
+	"time"
 	"bytes"
 	"strings"
 	"path/filepath"
+	"container/list"
 )
 
 func main(){
@@ -21,6 +23,8 @@ func main(){
 	bytesPkg()
 	osPkg()
 	filePath()
+	defer errorPkg()
+	 containerList()
 }
 
 func ioPkg(){
@@ -56,4 +60,38 @@ func filePath(){
 		fmt.Println(path)
 		return nil
 	}))
+}
+
+type MyError struct{
+	When time.Time
+	What string
+}
+
+func (e MyError) Error() string {
+	return fmt.Sprintf("%v: %v", e.When, e.What)
+}
+
+func oops() error {
+	return MyError{
+		time.Now(),
+		"File System has gone away",
+	}
+}
+
+func errorPkg(){
+	if err := oops(); err != nil {
+		log.Println(err)
+	}
+}
+
+func containerList(){
+	l := list.New()
+	e4 := l.PushBack(4)
+	e1 := l.PushFront(1)
+	l.InsertBefore(3, e4)
+	l.InsertAfter(2, e1)
+
+	for e := l.Front(); e != nil; e = e.Next() {
+		fmt.Println(e.Value)
+	}
 }
